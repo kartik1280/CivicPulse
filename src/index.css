@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-50 text-surface-900 font-sans antialiased transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-surface-950 text-surface-100;
+  }
+
+  * {
+    @apply border-surface-200;
+  }
+
+  .dark * {
+    @apply border-surface-700;
+  }
+}
+
+@layer components {
+  /* ── Buttons ── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium text-sm
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500
+           dark:bg-primary-500 dark:hover:bg-primary-600 shadow-sm hover:shadow-md;
+  }
+  .btn-secondary {
+    @apply btn bg-surface-100 text-surface-700 hover:bg-surface-200 focus:ring-surface-400
+           dark:bg-surface-800 dark:text-surface-200 dark:hover:bg-surface-700;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-surface-600 hover:bg-surface-100 focus:ring-surface-300
+           dark:text-surface-400 dark:hover:bg-surface-800;
+  }
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-sm;
+  }
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs rounded-md;
+  }
+  .btn-icon {
+    @apply btn p-2 rounded-full;
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-surface-200 transition-all duration-200
+           dark:bg-surface-900 dark:border-surface-700;
+  }
+  .card-hover {
+    @apply card hover:shadow-lg hover:-translate-y-0.5 cursor-pointer;
+  }
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/30 shadow-lg
+           dark:bg-surface-900/80 dark:border-surface-700/50;
+  }
+
+  /* ── Form elements ── */
+  .input {
+    @apply w-full px-4 py-2.5 rounded-xl border border-surface-300 bg-white text-surface-900
+           placeholder-surface-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent
+           transition-all duration-200 text-sm
+           dark:bg-surface-800 dark:border-surface-600 dark:text-surface-100 dark:placeholder-surface-500
+           dark:focus:ring-primary-400;
+  }
+  .label {
+    @apply block text-sm font-medium text-surface-700 dark:text-surface-300 mb-1;
+  }
+  .select {
+    @apply input appearance-none cursor-pointer;
+  }
+
+  /* ── Badge ── */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  /* ── Issue tag colors ── */
+  .tag-water       { @apply badge bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300; }
+  .tag-road        { @apply badge bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300; }
+  .tag-electricity { @apply badge bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-300; }
+  .tag-safety      { @apply badge bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300; }
+  .tag-other       { @apply badge bg-surface-100 text-surface-700 dark:bg-surface-800 dark:text-surface-300; }
+
+  /* ── Scrollbar ── */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.surface.300') transparent;
+  }
+  .dark .scrollbar-thin {
+    scrollbar-color: theme('colors.surface.600') transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar       { width: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: theme('colors.surface.300'); border-radius: 999px; }
+  .dark .scrollbar-thin::-webkit-scrollbar-thumb { background: theme('colors.surface.600'); }
+
+  /* ── Skeleton loader ── */
+  .skeleton {
+    @apply animate-pulse bg-surface-200 dark:bg-surface-700 rounded-lg;
+  }
+
+  /* ── Page wrapper ── */
+  .page-wrapper {
+    @apply min-h-screen bg-surface-50 dark:bg-surface-950 transition-colors duration-300;
+  }
+
+  /* ── Gradient text ── */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in  { animation: fadeIn  0.3s ease-out; }
+  .animate-slide-up { animation: slideUp 0.3s ease-out; }
+}
+
+@keyframes fadeIn  { from { opacity: 0; }                             to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
