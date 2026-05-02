@@ -1,6 +1,6 @@
 // src/pages/Dashboard.jsx
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../lib/api';
 import {
   BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, ResponsiveContainer, Cell, Legend
@@ -50,7 +50,7 @@ function Dashboard() {
   const [error,   setError]   = useState(null);
 
   useEffect(() => {
-    axios.get('/api/stats')
+    api.get('/api/stats')
       .then(({ data }) => setStats(data))
       .catch(() => setError('Failed to load dashboard data.'))
       .finally(() => setLoading(false));

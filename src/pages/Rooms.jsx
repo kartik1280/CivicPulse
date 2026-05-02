@@ -1,7 +1,7 @@
 // src/pages/Rooms.jsx
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from '../lib/api';
 import Navbar from '../components/Navbar';
 
 const TAG_CLASSES = {
@@ -47,7 +47,7 @@ function Rooms() {
   const [error,   setError]   = useState(null);
 
   useEffect(() => {
-    axios.get('/api/rooms')
+    api.get('/api/rooms')
       .then(({ data }) => setRooms(data))
       .catch(() => setError('Failed to load rooms. Is the backend running?'))
       .finally(() => setLoading(false));

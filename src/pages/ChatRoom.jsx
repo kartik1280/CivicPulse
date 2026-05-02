@@ -2,7 +2,7 @@
 import { useEffect, useRef, useCallback, useMemo, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+import api from '../lib/api';
 import Navbar from '../components/Navbar';
 import MessageItem from '../components/MessageItem';
 import WeatherWidget from '../components/WeatherWidget';
@@ -76,7 +76,7 @@ function ChatRoom() {
   const fetchMessages = useCallback(async (pg = 1) => {
     dispatch(setLoading(true));
     try {
-      const { data } = await axios.get(`/api/rooms/${roomId}/messages`, {
+      const { data } = await api.get(`/api/rooms/${roomId}/messages`, {
         params: { page: pg, limit: 20 },
       });
       if (pg === 1) {
