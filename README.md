@@ -1,20 +1,47 @@
-# CivicPulse 🏙️
+# CivicPulse 🏙️  
+*A Real-Time Community Help Chat Platform*
 
-A real-time **Community Help Chat Platform** where citizens report and discuss local civic issues (water, roads, electricity, safety) organized by city rooms.
+CivicPulse is a real-time civic engagement platform that enables citizens to **report, discuss, and track local issues** such as water shortages, road damage, electricity outages, and safety concerns — all organized into **city-based chat rooms**.
 
-## Tech Stack
+---
+
+## 🚀 Live Demo
+
+🌐 **Frontend (Vercel):** https://civic-pulse-ruby.vercel.app/  
+⚙️ **Backend (Render):** https://civicpulse-rybs.onrender.com(connected via API)
+
+--- 
+
+## 🚀 Overview
+
+Modern cities generate thousands of civic complaints daily, but there is **no unified, real-time communication system** for citizens to collaborate or raise awareness.
+
+**CivicPulse solves this by:**
+- Creating **city-specific discussion spaces**
+- Enabling **real-time communication**
+- Providing **issue categorization & visibility**
+- Supporting **analytics for insights**
+
+---
+
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | React 18 + Vite, Tailwind CSS v3, React Router v6 |
-| State | Redux Toolkit + Context API |
-| Auth | Firebase Authentication (email/password) |
-| Real-time | Socket.IO (client + server) |
-| Charts | Recharts |
-| HTTP | Axios |
-| Backend | Node.js + Express + Socket.IO |
-| Data | In-memory (no database) |
-| Weather | OpenWeatherMap API (free tier) |
+| **Frontend** | React 18 + Vite, Tailwind CSS v3, React Router v6 |
+| **State Management** | Redux Toolkit + Context API |
+| **Authentication** | Firebase Authentication |
+| **Real-Time** | Socket.IO |
+| **Charts** | Recharts |
+| **HTTP** | Axios |
+| **Backend** | Node.js + Express + Socket.IO |
+| **Data** | In-memory (no database) |
+| **Weather API** | OpenWeatherMap |
+
+---
+
+## 📁 Project Structure
+
 
 ---
 
