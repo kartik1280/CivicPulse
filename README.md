@@ -8,7 +8,7 @@ CivicPulse is a real-time civic engagement platform that enables citizens to **r
 ## 🚀 Live Demo
 
 🌐 **Frontend (Vercel):** https://civic-pulse-ruby.vercel.app/  
-⚙️ **Backend (Render):** https://civicpulse-rybs.onrender.com(connected via API)
+⚙️ **Backend (Render):** https://civicpulse-rybs.onrender.com (connected via API)
 
 --- 
 
