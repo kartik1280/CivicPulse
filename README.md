@@ -1,5 +1,5 @@
 # CivicPulse 🏙️  
-*A Real-Time Community Help Chat Platform*
+**A Real-Time Community Help Chat Platform**
 
 CivicPulse is a real-time civic engagement platform that enables citizens to **report, discuss, and track local issues** such as water shortages, road damage, electricity outages, and safety concerns — all organized into **city-based chat rooms**.
 
